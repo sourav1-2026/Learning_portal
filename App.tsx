@@ -6,38 +6,22 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import MainLayout from './Screen/Dashboard/MainLayout';
 
-
-
+const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
-
-
   return (
-    <View >
-    <Text>Hello world</Text>
-   </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome Coder's" component={MainLayout} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-
 
 export default App;
