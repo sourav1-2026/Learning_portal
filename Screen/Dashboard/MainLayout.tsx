@@ -20,6 +20,7 @@ export default function MainLayout() {
       {/* content */}
 
       {/* bottom tab */}
+
       <TabBar />
     </View>
   );
