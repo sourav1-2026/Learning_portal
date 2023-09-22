@@ -12,17 +12,16 @@ import {COLORS, SIZES, FONTS} from '../../constants';
 import constants from '../../constants/constants';
 
 import TabBar from '../../Components/TabBar';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export default function MainLayout() {
   return (
-    <View style={style.container}>
-      <Text style={{padding: 5}}>MainLayout</Text>
+    <SafeAreaView style={style.container}>
       {/* content */}
 
       {/* bottom tab */}
-
       <TabBar />
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -44,6 +44,7 @@ export default function TabBar() {
           fontWeight: 'bold',
           color: COLORS.white,
         },
+        headerShown: false,
       })}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Profile" component={Profile} />
