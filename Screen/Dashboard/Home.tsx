@@ -1,16 +1,22 @@
 import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 
-import {COLORS, FONTS, SIZES, icons, images, dummyData} from '../../constants';
+import {COLORS} from '../../constants';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import StartLearning from '../../Components/StartLearning';
+import RenderCourse from '../../Components/RenderCourse';
 
 export default function Home(): JSX.Element {
   return (
     <SafeAreaView style={[style.conatiner]}>
-      <ScrollView contentContainerStyle={style.contentContainer}>
+      <ScrollView
+        contentContainerStyle={style.contentContainer}
+        showsVerticalScrollIndicator={false}>
         {/* start learning */}
-        <StartLearning></StartLearning>
+        <StartLearning />
+
+        {/* Course */}
+        <RenderCourse />
       </ScrollView>
     </SafeAreaView>
   );
@@ -22,6 +28,6 @@ const style = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   contentContainer: {
-    paddingVertical: 15,
+    paddingBottom: 150,
   },
 });
