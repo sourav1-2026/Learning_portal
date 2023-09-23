@@ -1,7 +1,7 @@
-import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 
-import {COLORS} from '../../constants';
+import {COLORS, SIZES} from '../../constants';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import StartLearning from '../../Components/StartLearning';
 import RenderCourse from '../../Components/RenderCourse';
@@ -28,6 +28,6 @@ const style = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   contentContainer: {
-    paddingBottom: 150,
+    paddingBottom: '10%',
   },
 });

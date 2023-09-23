@@ -1,13 +1,6 @@
-import {
-  View,
-  Text,
-  ImageBackground,
-  StyleSheet,
-  Image,
-  Button,
-} from 'react-native';
+import {View, Text, ImageBackground, StyleSheet, Image} from 'react-native';
 import React from 'react';
-import {COLORS, FONTS, SIZES, icons, images, dummyData} from '../constants';
+import {COLORS, FONTS, SIZES, images} from '../constants';
 import LearningButton from './LearningButton';
 
 export default function StartLearning() {
@@ -63,12 +56,4 @@ const style = StyleSheet.create({
     height: 110,
     marginTop: SIZES.padding,
   },
-  //   container2: {
-  //     display: 'flex',
-  //     flexDirection: 'row',
-  //     justifyContent: 'center',
-  //     marginTop: SIZES.padding,
-  //     marginHorizontal: SIZES.padding,
-  //     padding: 15,
-  //   },
 });

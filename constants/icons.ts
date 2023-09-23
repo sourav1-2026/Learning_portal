@@ -1,4 +1,4 @@
-
+import { Image, ImageSourcePropType } from 'react-native';
 const all : string = require("../assets/icons/all.png")
 const animation : string = require("../assets/icons/animation.png")
 const back : string = require("../assets/icons/back.png")
@@ -37,7 +37,7 @@ const new_icon : string = require("../assets/icons/new.png")
 const notification : string= require("../assets/icons/notification.png")
 const original : string= require("../assets/icons/original.png")
 const password: string = require("../assets/icons/password.png")
-const play : string = require("../assets/icons/play.png")
+const play : any = require("../assets/icons/play.png")
 const play_1 : string = require("../assets/icons/play_1.png")
 const profile : string = require("../assets/icons/profile.png")
 const reminder : string = require("../assets/icons/reminder.png")
@@ -49,7 +49,7 @@ const staff_pick : string= require("../assets/icons/staff_pick.png")
 const star : string = require("../assets/icons/star.png")
 const star_1 : string= require("../assets/icons/star_1.png")
 const sun : string= require("../assets/icons/sun.png")
-const time : string= require("../assets/icons/time.png")
+const time : ImageSourcePropType= require("../assets/icons/time.png")
 const web_design : string = require("../assets/icons/web_design.png")
 
 export default {

@@ -11,6 +11,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainLayout from './Screen/Dashboard/MainLayout';
 import HeaderIcon from './Components/HeaderIcon';
 import {COLORS, FONTS} from './constants';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator();
 

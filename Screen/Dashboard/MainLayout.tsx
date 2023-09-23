@@ -1,15 +1,7 @@
-import {
-  View,
-  Text,
-  Animated,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 
-import {COLORS, SIZES, FONTS} from '../../constants';
-import constants from '../../constants/constants';
+import {COLORS} from '../../constants';
 
 import TabBar from '../../Components/TabBar';
 import {SafeAreaView} from 'react-native-safe-area-context';

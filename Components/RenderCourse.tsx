@@ -12,18 +12,12 @@ export default function RenderCourse() {
       data={dummyData.courses_list_1}
       keyExtractor={item => `Course-${item.id}`}
       renderItem={({item, index}) => (
-        <CoursesCard
-          containerStyle={{
-            marginLeft: index == 0 ? SIZES.padding : SIZES.radius,
-            marginRight:
-              index == dummyData.courses_list_1.length - 1 ? SIZES.padding : 0,
-          }}
-          course={item}
-        />
+        <CoursesCard course={item} index={index} />
       )}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={{
         marginTop: SIZES.padding,
-      }}></FlatList>
+      }}
+    />
   );
 }

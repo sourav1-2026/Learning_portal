@@ -6,7 +6,7 @@ import Profile from '../Screen/Dashboard/Profile';
 import Search from '../Screen/Dashboard/Search';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {COLORS, SIZES, FONTS} from '../constants';
+import {COLORS, SIZES} from '../constants';
 import {Dimensions} from 'react-native';
 
 export default function TabBar() {
