@@ -6,12 +6,26 @@ import {Image} from 'react-native';
 
 type TimeIconprop = {
   label: string;
+  iconstyle?: any;
+  sourceIcon: any;
+  labelStyle?: any;
 };
-export default function TimeIcon({label}: TimeIconprop) {
+export default function TimeIcon({
+  label,
+  iconstyle,
+  sourceIcon,
+  labelStyle,
+}: TimeIconprop) {
+  const iconStyle = iconstyle ? iconstyle : null;
+  const label_Style = labelStyle ? labelStyle : null;
   return (
     <View style={style.container}>
-      <Image style={style.timeIcon} source={icons.time} resizeMode="contain" />
-      <Text style={style.textstyle}>{label}</Text>
+      <Image
+        style={[style.timeIcon, iconStyle]}
+        source={sourceIcon}
+        resizeMode="contain"
+      />
+      <Text style={[style.textstyle, label_Style]}>{label}</Text>
     </View>
   );
 }
@@ -20,7 +34,6 @@ const style = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    // ...containerstyle
   },
   timeIcon: {
     width: 20,

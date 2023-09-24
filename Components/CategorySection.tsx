@@ -1,27 +1,19 @@
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import React from 'react';
-import {Platform} from 'react-native';
+
 import {SIZES, FONTS, COLORS, dummyData} from '../constants';
-import LearningButton from './LearningButton';
+
 import CategoryCard from './CategoryCard';
+import Section from './Section';
 
 export default function CategorySection() {
   const handlepress = () => {
-    console.log('Category Button pressed');
+    console.log('Category pressed');
   };
+
   return (
     <View>
-      <View style={style.heading}>
-        <Text style={style.textStyle}>CategorySection</Text>
-        <View style={{borderRadius: Platform.OS === 'ios' ? 30 : 28}}>
-          <LearningButton
-            text="see All"
-            disabled={false}
-            buttonColor={COLORS.primary}
-            onPress={handlepress}
-          />
-        </View>
-      </View>
+      <Section label="Categories" handlepress={handlepress} text="See All" />
       <FlatList
         horizontal
         data={dummyData.categories}

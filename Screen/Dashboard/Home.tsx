@@ -7,6 +7,8 @@ import StartLearning from '../../Components/StartLearning';
 import RenderCourse from '../../Components/RenderCourse';
 import LineDivider from '../../Components/LineDivider';
 import RenderCategories from '../../Components/RenderCategories';
+import CategorySection from '../../Components/CategorySection';
+import PopularCourses from '../../Components/PopularCourses';
 
 export default function Home(): JSX.Element {
   return (
@@ -19,8 +21,13 @@ export default function Home(): JSX.Element {
 
         {/* Course */}
         <RenderCourse />
+        {/* divide the line */}
         <LineDivider />
-        <RenderCategories />
+        {/* <RenderCategories /> */}
+        {/* category part */}
+        <CategorySection />
+        {/* popular courses part */}
+        <PopularCourses />
       </ScrollView>
     </SafeAreaView>
   );
