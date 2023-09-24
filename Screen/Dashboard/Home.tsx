@@ -5,6 +5,8 @@ import {COLORS, SIZES} from '../../constants';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import StartLearning from '../../Components/StartLearning';
 import RenderCourse from '../../Components/RenderCourse';
+import LineDivider from '../../Components/LineDivider';
+import RenderCategories from '../../Components/RenderCategories';
 
 export default function Home(): JSX.Element {
   return (
@@ -17,6 +19,8 @@ export default function Home(): JSX.Element {
 
         {/* Course */}
         <RenderCourse />
+        <LineDivider />
+        <RenderCategories />
       </ScrollView>
     </SafeAreaView>
   );

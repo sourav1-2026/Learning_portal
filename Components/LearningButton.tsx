@@ -7,19 +7,29 @@ import {useNavigation} from '@react-navigation/native';
 type buttontype = {
   text: string;
   disabled: boolean;
+  buttonColor?: string;
+  onPress: () => void;
 };
 
-export default function LearningButton({text, disabled}: buttontype) {
+export default function LearningButton({
+  text,
+  disabled,
+  buttonColor,
+  onPress,
+}: buttontype) {
   const navigation = useNavigation();
-  function handlePress(): void {
-    // navigation.navigate('Home')
-    console.log('pressed');
-  }
+  // function handlePress(): void {
+  //   // navigation.navigate('Home')
+  //   console.log('pressed');
+  // }
   return (
     <TouchableOpacity
-      style={style.ButtonConatiner}
+      style={[
+        style.ButtonConatiner,
+        {backgroundColor: buttonColor ? buttonColor : COLORS.white},
+      ]}
       disabled={disabled}
-      onPress={handlePress}>
+      onPress={onPress}>
       <Text style={style.text}>{text}</Text>
     </TouchableOpacity>
   );
@@ -29,7 +39,6 @@ const style = StyleSheet.create({
   ButtonConatiner: {
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: COLORS.white,
     paddingHorizontal: SIZES.padding,
     height: 40,
     alignItems: 'center',

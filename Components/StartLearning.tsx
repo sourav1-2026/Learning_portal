@@ -1,9 +1,13 @@
 import {View, Text, ImageBackground, StyleSheet, Image} from 'react-native';
 import React from 'react';
+import {Platform} from 'react-native';
 import {COLORS, FONTS, SIZES, images} from '../constants';
 import LearningButton from './LearningButton';
 
 export default function StartLearning() {
+  const handlepress = () => {
+    console.log('StartLearning Button pressed');
+  };
   return (
     <>
       <ImageBackground
@@ -20,7 +24,11 @@ export default function StartLearning() {
         </View>
         {/* image */}
         <Image source={images.start_learning} style={style.imageStyle} />
-        <LearningButton text="Start learning" disabled={false} />
+        <LearningButton
+          text="Start learning"
+          disabled={false}
+          onPress={handlepress}
+        />
       </ImageBackground>
     </>
   );
@@ -31,7 +39,7 @@ const style = StyleSheet.create({
     alignItems: 'flex-start',
     marginTop: SIZES.padding,
     marginHorizontal: SIZES.padding,
-    padding: 15,
+    padding: Platform.OS === 'ios' ? 15 : 13,
   },
   borderRadius: {
     borderRadius: SIZES.radius,
