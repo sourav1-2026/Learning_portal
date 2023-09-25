@@ -8,7 +8,7 @@ type buttontype = {
   text: string;
   disabled: boolean;
   buttonColor?: string;
-  onPress: () => void;
+  onPress?: () => void;
 };
 
 export default function LearningButton({
@@ -43,6 +43,7 @@ const style = StyleSheet.create({
     height: 40,
     alignItems: 'center',
     borderRadius: 20,
+    marginHorizontal: 5,
   },
   text: {
     color: COLORS.black,

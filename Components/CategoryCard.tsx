@@ -1,18 +1,25 @@
 // 55.27
 import {
-  View,
   Text,
-  Image,
   TouchableOpacity,
   StyleSheet,
-  Dimensions,
   ImageBackground,
 } from 'react-native';
 import React, {useState} from 'react';
 
-import {COLORS, SIZES, dummyData, icons, FONTS} from '../constants';
+import {COLORS, SIZES, dummyData, FONTS} from '../constants';
 
-export default function CategoryCard({Category, index}: any) {
+type Categoryprop = {
+  Category: any;
+  index: number;
+  containerStyle?: any;
+};
+
+export default function CategoryCard({
+  Category,
+  index,
+  containerStyle,
+}: Categoryprop) {
   return (
     <TouchableOpacity>
       <ImageBackground
