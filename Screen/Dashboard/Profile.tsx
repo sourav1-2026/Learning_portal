@@ -11,6 +11,8 @@ import React from 'react';
 import {COLORS, FONTS, SIZES, icons, images} from '../../constants';
 import RenderHeader from '../../Components/Profile/RenderHeader';
 import ProfileCard from '../../Components/Profile/ProfileCard';
+import ProfileSection1 from '../../Components/Profile/ProfileSection1';
+import ProfileSection2 from '../../Components/Profile/ProfileSection2';
 
 export default function Profile() {
   return (
@@ -24,6 +26,10 @@ export default function Profile() {
         }}>
         {/* profileCard */}
         <ProfileCard />
+        <ProfileSection1 />
+
+        {/* profile section 2 */}
+        <ProfileSection2 />
       </ScrollView>
     </View>
   );
