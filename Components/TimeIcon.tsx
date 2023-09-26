@@ -5,7 +5,7 @@ import {FONTS, SIZES, COLORS, icons} from '../constants';
 import {Image} from 'react-native';
 
 type TimeIconprop = {
-  label: string;
+  label?: string;
   iconstyle?: any;
   sourceIcon: any;
   labelStyle?: any;

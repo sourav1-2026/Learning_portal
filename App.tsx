@@ -1,17 +1,10 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainLayout from './Screen/Dashboard/MainLayout';
 import HeaderIcon from './Components/HeaderIcon';
-import {COLORS, FONTS} from './constants';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {COLORS} from './constants';
 
 const Stack = createNativeStackNavigator();
 

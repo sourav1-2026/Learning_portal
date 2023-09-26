@@ -39,7 +39,7 @@ export default function Search() {
     };
   });
   return (
-    <View style={style.container}>
+    <View style={[style.container]}>
       <Animated.ScrollView
         ref={scrollViewRef}
         contentContainerStyle={{

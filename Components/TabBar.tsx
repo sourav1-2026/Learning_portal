@@ -47,8 +47,8 @@ export default function TabBar() {
         headerShown: false,
       })}>
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Profile" component={Profile} />
       <Tab.Screen name="Search" component={Search} />
+      <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
 }
